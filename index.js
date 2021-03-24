@@ -11,6 +11,13 @@ window.onload = function () {
             this.resize = function () {
                 var n, m, clen,
                     x = img.offsetWidth / previousWidth;
+                for (n = 0; n < len; n++) {
+                    clen = coords[n].length;
+                    for (m = 0; m < clen; m++) {
+                        coords[n][m] *= x;
+                    }
+                    areas[n].coords = coords[n].join(',');
+                }
                
             };
             window.onresize = this.resize;
