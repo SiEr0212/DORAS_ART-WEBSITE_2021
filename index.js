@@ -8,7 +8,14 @@ window.onload = function () {
             for (n = 0; n < len; n++) {
                 coords[n] = areas[n].coords.split(',');
             }
-            
+            this.resize = function () {
+                var n, m, clen,
+                    x = img.offsetWidth / previousWidth;
+               
+            };
+            window.onresize = this.resize;
+        },
+        imageMap = new ImageMap(document.getElementById('map_ID'), document.getElementById('img_ID'));
     imageMap.resize();
     return;
 }
