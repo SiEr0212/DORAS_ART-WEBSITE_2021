@@ -13,17 +13,19 @@ body {
 }
 
 img {
-  /*  min-width: 100%;
-  min-height: 100%;
+   min-width: 100%;
+/*   min-height: 100%;
   height: 100%;
   width: 100%;
-  margin: auto; */
-  /*  object-fit: contain; */
+  margin: auto;  */
+   object-fit: cover;
   /* max-width: 100%;
   height:auto; */
   /* object-fit: contain; */
-  max-width: 100%;
+/*   max-width: 100%;
   max-height: 100%;
   height: 100vh;
-  width: 100%;
+  width: 100%; */
+  max-width: 100%;
+  height: auto;
 }
