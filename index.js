@@ -1,10 +1,17 @@
+const width  = window.innerWidth || document.documentElement.clientWidth || 
+document.body.clientWidth;
+const height = window.innerHeight|| document.documentElement.clientHeight|| 
+document.body.clientHeight;
+
+console.log(width, height);
+
 window.onload = function () {
   var ImageMap = function (map, img) {
       var n,
         areas = map.getElementsByTagName("area"),
         len = areas.length,
         coords = [],
-        previousWidth = 1093;
+        previousWidth = 1919;
       for (n = 0; n < len; n++) {
         coords[n] = areas[n].coords.split(",");
       }
@@ -32,3 +39,41 @@ window.onload = function () {
   imageMap.resize();
   return;
 };
+ 
+
+
+/* class ResponsiveImageMap {
+  constructor(map, img, width) {
+      this.img = img;
+      this.originalWidth = width;
+      this.areas = [];
+
+      for (const area of map.getElementsByTagName('area')) {
+          this.areas.push({
+              element: area,
+              originalCoords: area.coords.split(',')
+          });
+      }
+
+      window.addEventListener('resize', e => this.resize(e));
+      this.resize();
+  }
+
+  resize() {
+      const ratio = this.img.offsetWidth / this.originalWidth;
+
+      for (const area of this.areas) {
+          const newCoords = [];
+          for (const originalCoord of area.originalCoords) {
+              newCoords.push(Math.round(originalCoord * ratio));
+          }
+          area.element.coords = newCoords.join(',');
+      }
+
+      return true;
+  };
+}
+
+var map = document.getElementById('map_ID');
+var image = document.getElementById('img_ID');
+new ResponsiveImageMap(map, image, 800); */
