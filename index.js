@@ -4,7 +4,7 @@ window.onload = function () {
         areas = map.getElementsByTagName("area"),
         len = areas.length,
         coords = [],
-        previousWidth = 2400;
+        previousWidth = img.offsetWidth;
       for (n = 0; n < len; n++) {
         coords[n] = areas[n].coords.split(",");
       }

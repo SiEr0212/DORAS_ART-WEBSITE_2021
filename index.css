@@ -15,14 +15,16 @@ body {
   align-items: stretch;
   align-content: stretch; */
   background:#FEFBF0;
+  /* display: flex;  */
   
 }
-.container {
- /*  display: flex; */
-  height: 100%;  
-  width: 100%;
+ .container {
+   /* display: flex;  */ 
+ height: 100%;   
+ width: 100%; 
   
-}
+} 
+
 img {
   height: 100%; 
   width: 100%;
