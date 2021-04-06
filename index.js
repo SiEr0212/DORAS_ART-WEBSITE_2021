@@ -1,47 +1,35 @@
-/* function debouncer( func , timeout ) {
-  var timeoutID , timeout = timeout || 200;
-  return function () {
-     var scope = this , args = arguments;
-     clearTimeout( timeoutID );
-     timeoutID = setTimeout( function () {
-         func.apply( scope , Array.prototype.slice.call( args ) );
-     } , timeout );
-  }
-} */
-
-  window.onload = function () {
-    var ImageMap = function (map, img) {
+window.onload = function () {
+  var ImageMap = function (map, img) {
+      var n,
+        areas = map.getElementsByTagName("area"),
+        len = areas.length,
+        coords = [],
+        previousWidth = 2400;
+      for (n = 0; n < len; n++) {
+        coords[n] = areas[n].coords.split(",");
+      }
+      this.resize = function () {
         var n,
-          areas = map.getElementsByTagName("area"),
-          len = areas.length,
-          coords = [],
-          previousWidth = 2400;
+          m,
+          clen,
+          x = img.offsetWidth / previousWidth;
         for (n = 0; n < len; n++) {
-          coords[n] = areas[n].coords.split(",");
-        }
-        this.resize = function () {
-          var n,
-            m,
-            clen,
-            x = img.offsetWidth / previousWidth;
-          for (n = 0; n < len; n++) {
-            clen = coords[n].length;
-            for (m = 0; m < clen; m++) {
-              coords[n][m] *= x;
-            }
-            areas[n].coords = coords[n].join(",");
+          clen = coords[n].length;
+          for (m = 0; m < clen; m++) {
+            coords[n][m] *= x;
           }
-          previousWidth = document.body.clientWidth;
-          return true;
-        };
-        window.onresize = this.resize;
-        console.log(coords)
-      },
-      imageMap = new ImageMap(
-        document.getElementById("map_ID"),
-        document.getElementById("img_ID")
-      );
-    imageMap.resize();
-    return;
-  };
-  
+          areas[n].coords = coords[n].join(",");
+        }
+        previousWidth = document.body.clientWidth;
+        return true;
+      };
+      window.onresize = this.resize;
+      console.log(coords);
+    },
+    imageMap = new ImageMap(
+      document.getElementById("map_ID"),
+      document.getElementById("img_ID")
+    );
+  imageMap.resize();
+  return;
+};
