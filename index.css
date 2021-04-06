@@ -9,24 +9,22 @@ body {
   padding: 0;
   margin: 0;
   overflow: hidden;
- /*  display: flex;
+  /*  display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
   align-items: stretch;
   align-content: stretch; */
-  background:#FEFBF0;
+  background: #fefbf0;
   /* display: flex;  */
-  
 }
- .container {
-   /* display: flex;  */ 
- height: 100%;   
- width: 100%; 
-  
-} 
+/* .container {
+  display: flex;  
+  height: 100%;
+  width: 100%;
+} */
 
 img {
-  height: 100%; 
+  height: 100%;
   width: 100%;
   object-fit: contain;
 }
