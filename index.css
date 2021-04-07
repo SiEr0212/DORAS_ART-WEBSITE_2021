@@ -9,13 +9,7 @@ body {
   padding: 0;
   margin: 0;
   overflow: hidden;
-  /*  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  align-items: stretch;
-  align-content: stretch; */
   background: #fefbf0;
-  /* display: flex;  */
 }
 
 
