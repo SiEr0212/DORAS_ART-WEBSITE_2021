@@ -6,8 +6,8 @@
 html,
 body {
   height: 100%;
-  padding: 10px;
-  margin: 10px;
+  padding: 10px;/*added*/
+  margin: 10px;/*added*/
   overflow: hidden;
   background: #fefbf0;
 }
