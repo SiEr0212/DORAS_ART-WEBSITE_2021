@@ -1,6 +1,8 @@
 @-moz-document url-prefix() {
   div {
-    margin-top: -1.5%;
+    margin-top: -1%;
+    
+    
   }
 }
 
