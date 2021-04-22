@@ -1,19 +1,28 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+@-moz-document url-prefix() {
+  div {
+    margin-top: -1.5%;
+  }
 }
+
 html,
 body {
-  height: 100%;
-  padding: 10px;/*added*/
-  margin: 10px;/*added*/
   overflow: hidden;
   background: #fefbf0;
+  margin: 0;
+  margin-bottom: 0;
+  padding: 0;
+  box-sizing: content-box;
+}
+
+html {
+  min-height: 100%;
+  background: url(./BG_2400x1260pixel.jpg) center center cover no-repeat fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 img {
-  height: 100%;
   width: 100%;
-  object-fit: contain;
 }
